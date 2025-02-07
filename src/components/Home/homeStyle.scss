@@ -28,6 +28,12 @@
    text-align: center;
 }
 
+.main__link {
+   text-decoration: none;
+   display: block;
+   width: 100%;
+}
+
 .main__btn {
    display: block;
    height: px-to-rem(49.83);
@@ -41,6 +47,5 @@
    font-size: 15.95;
    border: none;
    border-radius: px-to-rem(5);
-   margin-block-end: px-to-rem(64.78);
    cursor: pointer;
 }

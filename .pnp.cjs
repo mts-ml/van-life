@@ -31,11 +31,13 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.0.8"],\
           ["@types/react-dom", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:19.0.3"],\
           ["@vitejs/plugin-react", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:4.3.4"],\
+          ["clsx", "npm:2.1.1"],\
           ["eslint", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:9.19.0"],\
           ["eslint-plugin-react", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:7.37.4"],\
           ["eslint-plugin-react-hooks", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:5.1.0"],\
           ["eslint-plugin-react-refresh", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:0.4.18"],\
           ["globals", "npm:15.14.0"],\
+          ["miragejs", "npm:0.1.48"],\
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:19.0.0"],\
           ["react-router-dom", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:7.1.5"],\
@@ -758,6 +760,15 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/trace-mapping", "npm:0.3.25"],\
           ["@jridgewell/resolve-uri", "npm:3.1.2"],\
           ["@jridgewell/sourcemap-codec", "npm:1.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@miragejs/pretender-node-polyfill", [\
+      ["npm:0.1.2", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@miragejs-pretender-node-polyfill-npm-0.1.2-faa2774172-10c0.zip/node_modules/@miragejs/pretender-node-polyfill/",\
+        "packageDependencies": [\
+          ["@miragejs/pretender-node-polyfill", "npm:0.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1614,6 +1625,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["clsx", [\
+      ["npm:2.1.1", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/clsx-npm-2.1.1-96125b98be-10c0.zip/node_modules/clsx/",\
+        "packageDependencies": [\
+          ["clsx", "npm:2.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["color-convert", [\
       ["npm:2.0.1", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/color-convert-npm-2.0.1-79730e935b-10c0.zip/node_modules/color-convert/",\
@@ -2292,6 +2312,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["fake-xml-http-request", [\
+      ["npm:2.1.2", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/fake-xml-http-request-npm-2.1.2-1665da7d82-10c0.zip/node_modules/fake-xml-http-request/",\
+        "packageDependencies": [\
+          ["fake-xml-http-request", "npm:2.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["fast-deep-equal", [\
       ["npm:3.1.3", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-10c0.zip/node_modules/fast-deep-equal/",\
@@ -2714,6 +2743,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/imurmurhash-npm-0.1.4-610c5068a0-10c0.zip/node_modules/imurmurhash/",\
         "packageDependencies": [\
           ["imurmurhash", "npm:0.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["inflected", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/inflected-npm-2.1.0-3319dba3d4-10c0.zip/node_modules/inflected/",\
+        "packageDependencies": [\
+          ["inflected", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3173,6 +3211,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lodash", [\
+      ["npm:4.17.21", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/lodash-npm-4.17.21-6382451519-10c0.zip/node_modules/lodash/",\
+        "packageDependencies": [\
+          ["lodash", "npm:4.17.21"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lodash.merge", [\
       ["npm:4.6.2", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/lodash.merge-npm-4.6.2-77cb4416bf-10c0.zip/node_modules/lodash.merge/",\
@@ -3344,6 +3391,19 @@ const RAW_RUNTIME_STATE =
           ["minizlib", "npm:3.0.1"],\
           ["minipass", "npm:7.1.2"],\
           ["rimraf", "npm:5.0.10"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["miragejs", [\
+      ["npm:0.1.48", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/miragejs-npm-0.1.48-3b9dcb8395-10c0.zip/node_modules/miragejs/",\
+        "packageDependencies": [\
+          ["miragejs", "npm:0.1.48"],\
+          ["@miragejs/pretender-node-polyfill", "npm:0.1.2"],\
+          ["inflected", "npm:2.1.0"],\
+          ["lodash", "npm:4.17.21"],\
+          ["pretender", "npm:3.4.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3682,6 +3742,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["pretender", [\
+      ["npm:3.4.7", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/pretender-npm-3.4.7-4c29357b56-10c0.zip/node_modules/pretender/",\
+        "packageDependencies": [\
+          ["pretender", "npm:3.4.7"],\
+          ["fake-xml-http-request", "npm:2.1.2"],\
+          ["route-recognizer", "npm:0.3.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["proc-log", [\
       ["npm:5.0.0", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/proc-log-npm-5.0.0-405173f9b4-10c0.zip/node_modules/proc-log/",\
@@ -3937,6 +4008,15 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-win32-x64-msvc", "npm:4.34.5"],\
           ["@types/estree", "npm:1.0.6"],\
           ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["route-recognizer", [\
+      ["npm:0.3.4", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/route-recognizer-npm-0.3.4-e2704e473b-10c0.zip/node_modules/route-recognizer/",\
+        "packageDependencies": [\
+          ["route-recognizer", "npm:0.3.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4533,11 +4613,13 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.0.8"],\
           ["@types/react-dom", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:19.0.3"],\
           ["@vitejs/plugin-react", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:4.3.4"],\
+          ["clsx", "npm:2.1.1"],\
           ["eslint", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:9.19.0"],\
           ["eslint-plugin-react", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:7.37.4"],\
           ["eslint-plugin-react-hooks", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:5.1.0"],\
           ["eslint-plugin-react-refresh", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:0.4.18"],\
           ["globals", "npm:15.14.0"],\
+          ["miragejs", "npm:0.1.48"],\
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:19.0.0"],\
           ["react-router-dom", "virtual:01399d566ef2d919daf780cdd9251bc62c36ab4f070d5f6edb6b8bcde438459cf7f3efefe90895fb7a53d0cde766992bd19c663eef54b4ad8448ab67964fd330#npm:7.1.5"],\

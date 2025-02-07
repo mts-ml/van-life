@@ -14,9 +14,15 @@
    justify-content: space-between;
    align-items: center;
    width: 100%;
-   padding-inline: px-to-rem(26);
+   padding-inline: px-to-rem(20);
    gap: px-to-rem(16);
    max-width: px-to-rem(1400);
+}
+
+@media (min-width:px-to-rem(340)) {
+   .header__wrapper {
+      padding-inline: px-to-rem(26);
+   }
 }
 
 .header__title {

@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 
 import './headerStyle.scss';
 
 
 export default function Header() {
+
    return (
       <header className="header">
          <div className="header__wrapper">
@@ -17,15 +18,34 @@ export default function Header() {
             <nav>
                <ul className="header__list">
                   <li>
-                     <Link to="/about" className='header__link'>About</Link>
+                     <NavLink
+                        to="/host"
+                        className={({ isActive }) => `header__link ${isActive ? "active-link" : null}`}
+                     >
+                        Host
+                     </NavLink>
                   </li>
 
                   <li>
-                     <Link to="/vans" className='header__link'>Vans</Link>
+                     <NavLink
+                        to="/about"
+                        className={({isActive}) => `header__link ${isActive ? "active-link" : null}`}
+                     >
+                        About
+                     </NavLink>
+                  </li>
+
+                  <li>
+                     <NavLink
+                        to="/vans"
+                        className={({isActive}) => `header__link ${isActive ? "active-link" : null}`}
+                     >
+                        Vans
+                     </NavLink>
                   </li>
                </ul>
             </nav>
          </div>
-      </header >
+      </header>
    )
 }

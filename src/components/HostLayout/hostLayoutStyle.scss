@@ -1,0 +1,62 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.host__list {
+   list-style: none;
+   font-size: px-to-rem(14);
+   text-align: center;
+   padding-inline: px-to-rem(26);
+   max-width: px-to-rem(1400);
+   font-weight: 500;
+}
+
+.host__li {
+   margin-block: px-to-rem(10) px-to-rem(20);
+}
+
+.host__link {
+   text-decoration: none;
+   color: #161616;
+   position: relative;
+   font-weight: 500;
+
+   &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: #161616;
+      bottom: -8px;
+      left: 0;
+      transform: scale(0);
+   }
+
+   &:hover::after {
+      transform: scale(1);
+      transition: transform .5s ease-in-out;
+   }   
+}
+
+.host__link[aria-current="page"] {
+   font-weight: 700;
+
+   &::after {
+      transform: scale(1);
+   }
+}
+
+
+
+@media (min-width:px-to-rem(375)) {
+   .host__list {
+      display: flex;
+      align-items: center;
+      gap: px-to-rem(29);
+      margin-inline: auto;
+   }
+
+   .host__link {
+      font-size: px-to-rem(17);
+   }
+}

@@ -1,0 +1,51 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.main {
+   display: grid;
+   place-items: center;
+   background: url('../../assets/images/bg-main-img.png') center no-repeat scroll;
+   background-size: cover;
+   height: 81.3vh;
+   padding: px-to-rem(65.78) px-to-rem(26.91);
+}
+
+.main__title {
+   font-weight: 800;
+   font-size: px-to-rem(36);
+   color: #fff;
+   text-align: center;
+   margin-block-end: px-to-rem(22.64);
+}
+
+.main__description {
+   font-size: px-to-rem(16);
+   font-weight: 500;
+   color: white;
+   margin-block-end: px-to-rem(51.66);
+   margin-inline: auto;
+   text-align: center;
+}
+
+.main__link {
+   text-decoration: none;
+   display: block;
+   width: 100%;
+}
+
+.main__btn {
+   display: block;
+   height: px-to-rem(49.83);
+   width: 100%;
+   max-width: px-to-rem(1300);
+   text-align: center;
+   margin-inline: auto;
+   background-color: #FF8C38;
+   font-weight: 700;
+   color: #fff;
+   font-size: 15.95;
+   border: none;
+   border-radius: px-to-rem(5);
+   cursor: pointer;
+}

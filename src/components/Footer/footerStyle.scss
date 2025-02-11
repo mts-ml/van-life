@@ -10,6 +10,11 @@
    place-items: center;
 }
 
+.fixed-footer {
+   position: fixed;
+   bottom: 0;
+}
+
 .footer__title {
    font-weight: 500;
    font-size: px-to-rem(14);

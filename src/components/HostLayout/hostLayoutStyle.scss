@@ -30,6 +30,8 @@
       bottom: -8px;
       left: 0;
       transform: scale(0);
+      transition: transform .5s ease-in-out;
+      transform-origin: right;
    }
 
    &:hover::after {
@@ -39,6 +41,14 @@
 }
 
 .host__link[aria-current="page"] {
+   font-weight: 700;
+
+   &::after {
+      transform: scale(1);
+   }
+}
+
+.active {
    font-weight: 700;
 
    &::after {

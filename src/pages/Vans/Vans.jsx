@@ -17,7 +17,6 @@ export default function Vans() {
       fetchData()
    }, []);
 
-
    const vanType = (type) => {
       return clsx({
          vans__type: true,

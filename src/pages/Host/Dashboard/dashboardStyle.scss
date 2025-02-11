@@ -1,0 +1,117 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.dashboard {
+   max-width: px-to-rem(1400);
+   margin-inline: auto;
+   margin-block-start: px-to-rem(45);
+}
+
+.dashboard__welcome {
+   padding: px-to-rem(37) px-to-rem(26);
+   background-color: #FFEAD0;
+}
+
+.dashboard__title {
+   font-size: clamp(1.688rem, 1.483rem + 1.023vw, 2.25rem);
+   font-weight: 700;
+   margin-block-end: px-to-rem(31);
+}
+
+.dashboard__div {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-block-end: px-to-rem(31);
+}
+
+.dashboard__income {
+   display: flex;
+   align-items: center;
+   font-size: px-to-rem(16);
+}
+
+.dashboard__span {
+   font-weight: 700;
+   margin-inline-start: px-to-rem(5);
+   text-decoration: underline;
+   color: #4D4D4D;
+}
+
+.dashboards__details {
+   color: #161616;
+   font-size: px-to-rem(16);
+   font-weight: 500;
+}
+
+.dashboard__price {
+   font-size: clamp(2.5rem, 2.318rem + 0.909vw, 3rem);
+   font-weight: 800;
+   color: #161616;
+}
+
+.dashboard__review {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #FFDDB2;
+   padding: px-to-rem(45) px-to-rem(26);
+}
+
+.dashboard__score {
+   display: flex;
+   align-items: flex-end;
+   gap: px-to-rem(12);
+}
+
+.dashboard__score-info {
+   font-size: clamp(1.25rem, 1.159rem + 0.455vw, 1.5rem);
+   font-weight: 700;
+}
+
+.dashboards__points {
+   font-size: clamp(1.125rem, 1.08rem + 0.227vw, 1.25rem);
+}
+
+
+
+
+
+
+.listed-vans {
+   padding: 0 px-to-rem(26) px-to-rem(38);
+}
+
+.listed-vans__title {
+   font-size: clamp(1.25rem, 1.159rem + 0.455vw, 1.5rem);
+   font-weight: 700;
+}
+
+.listed-vans__info {
+   margin-block: px-to-rem(38) px-to-rem(30);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+}
+
+.listed-vans__van {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: px-to-rem(18) px-to-rem(27);
+   margin-block-end: px-to-rem(15);
+   background-color: #fff;
+}
+
+.listed-vans__model {
+   display: flex;
+   align-items: center;
+   gap: px-to-rem(17);
+   justify-content: space-between;
+}
+
+.listed-vans__price {
+   opacity: .7;
+}

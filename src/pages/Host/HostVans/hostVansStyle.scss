@@ -1,0 +1,33 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.host-vans {
+   padding: 0 px-to-rem(28) px-to-rem(66);
+   max-width: px-to-rem(1400);
+   margin-inline: auto;
+}
+
+.host {
+   margin-block: px-to-rem(55) px-to-rem(32);
+}
+
+.host-vans__link {
+   text-decoration: none;
+   color: #161616;
+}
+
+#loading {
+   position: absolute;
+   font-weight: 700;
+   top: 47%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+svg[viewBox="0 0 120 30"] {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}

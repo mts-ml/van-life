@@ -49,9 +49,7 @@ export default function VanDetail() {
             <span className="van__daily">/day</span>
          </div>
 
-         <p className="van__description">
-            The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!
-         </p>
+         <p className="van__description">{van.description}</p>
 
          <a className='van__rent' href="#" target="_self" rel="noopener noreferrer">Rent this van</a>
       </section>

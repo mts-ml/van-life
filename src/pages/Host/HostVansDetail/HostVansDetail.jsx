@@ -34,8 +34,6 @@ export default function HostVansDetail() {
          luxury: van.type === "luxury",
       })
 
-
-
       return (
          <div key={van.id} className="host-detail__container">
             <div className="host-detail__van">
@@ -53,42 +51,47 @@ export default function HostVansDetail() {
                </div>
             </div>
 
-            <ul className="host-detail__list">
-               <li className="host-detail__li">
-                  <NavLink
-                     className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
-                     to="" // IT'S INDEX
-                     end
-                  >
-                     Details</NavLink>
-               </li>
+            <nav>
+               <ul className="host-detail__list">
+                  <li className="host-detail__li">
+                     <NavLink
+                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
+                        to="." // IT'S INDEX
+                        end
+                     >
+                        Details</NavLink>
+                  </li>
 
-               <li className="host-detail__li">
-                  <NavLink
-                     className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
-                     to={`pricing`}
-                  >
-                     Pricing</NavLink>
-               </li>
+                  <li className="host-detail__li">
+                     <NavLink
+                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
+                        to={`pricing`}
+                     >
+                        Pricing</NavLink>
+                  </li>
 
-               <li className="host-detail__li">
-                  <NavLink
-                     className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
-                     to={`photos`}
-                  >
-                     Photos</NavLink>
-               </li>
-            </ul>
+                  <li className="host-detail__li">
+                     <NavLink
+                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
+                        to={`photos`}
+                     >
+                        Photos</NavLink>
+                  </li>
+               </ul>
+            </nav>
 
-            <Outlet />
+            <Outlet
+               context={hostVansDetail[0]}
+            />
          </div>
       )
    })
 
 
+
    return (
       <section className="host-detail">
-         <Link to="/host/vans">
+         <Link to=".." relative="path">
             <button className='host-detail__btn'>
                <img src={arrow} alt="Image of an arrow pointing left" />
                Back to all vans

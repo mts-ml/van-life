@@ -5,7 +5,7 @@
 .vans {
    padding-inline: px-to-rem(22);
    background-color: #FFF7ED;
-   max-width: px-to-rem(1200);
+   max-width: px-to-rem(1400);
    margin-inline: auto;
 }
 
@@ -19,14 +19,10 @@
    font-size: clamp(1.6rem, 1.403rem + 0.795vw, 2rem);
    font-weight: 700;
    color: #161616;
-   margin-block: px-to-rem(54.23) px-to-rem(22.39);
+   margin-block: px-to-rem(54.23) px-to-rem(35);
 }
 
 .vans__filter {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: px-to-rem(40);
    margin-block-end: px-to-rem(55.69);
 }
 
@@ -40,32 +36,14 @@
 .vans__li {
    font-size: px-to-rem(16);
    font-weight: 500;
+}
 
-   &>a {
-      position: relative;
-      text-decoration: none;
-      border-radius: px-to-rem(5);
-      color: #4D4D4D;
-      background-color: #FFEAD0;
-      padding-block: px-to-rem(6);
-
-      &::after {
-         content: '';
-         position: absolute;
-         height: px-to-rem(1.5);
-         width: 100%;
-         left: 0;
-         bottom: -5px;
-         background-color: #161616;
-         transform: scale(0);
-         transition: transform .4s ease-in-out;
-      }
-
-      &:hover::after {
-         transform: scale(1);
-         transition: transform .4s ease-in-out;
-      }
-   }
+.vans__type-link {
+   position: relative;
+   text-decoration: none;
+   border-radius: px-to-rem(5);
+   color: #FFEAD0;
+   padding: px-to-rem(6);
 }
 
 // MEDIA QUERIE
@@ -78,6 +56,7 @@
       padding: px-to-rem(6) px-to-rem(25);
    }
 }
+
 // ------------------------------------------
 
 .vans__van {
@@ -101,6 +80,32 @@
    text-decoration: underline;
    text-decoration-color: #4D4D4D;
    cursor: pointer;
+   border: none;
+   background-color: #FFF7ED;
+   margin-block-start: px-to-rem(40);
+}
+
+@media (min-width: px-to-rem(390)) {
+
+   .vans__filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: px-to-rem(40);
+      margin-block-end: px-to-rem(55.69);
+   }
+
+   .vans__clear {
+      font-size: px-to-rem(16);
+      font-weight: 500;
+      color: #4D4D4D;
+      text-decoration: underline;
+      text-decoration-color: #4D4D4D;
+      cursor: pointer;
+      border: none;
+      background-color: #FFF7ED;
+      margin-block-start: 0;
+   }
 }
 
 .vans__info {
@@ -151,7 +156,7 @@
    .vans__van {
       margin-block-end: px-to-rem(0);
    }
-     
+
    .vans__van:nth-last-child(2):nth-child(odd) {
       margin-block-end: px-to-rem(83.23);
    }
@@ -159,5 +164,5 @@
    .vans__van:nth-last-child(1) {
       margin-block-end: px-to-rem(83.23);
    }
-  
+
 }

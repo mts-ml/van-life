@@ -41,22 +41,20 @@ export default function HostVans() {
       <section className="host-vans">
          <h3 className="listed-vans__title host">Your listed vans</h3>
 
-         {
-
-            hostVans.length > 0 ?
-               vansArray
-               :
-               <>
-                  <span id='loading'>Loading...</span>
-                  <ThreeDots
-                     visible={true}
-                     height={80}
-                     width={80}
-                     color="rgb(80, 135, 167)"
-                     radius="9"
-                     ariaLabel="three-dots-loading"
-                  />
-               </>
+         {hostVans.length > 0 ?
+            vansArray
+            :
+            <>
+               <span id='loading'>Loading...</span>
+               <ThreeDots
+                  visible={true}
+                  height={80}
+                  width={80}
+                  color="rgb(80, 135, 167)"
+                  radius="9"
+                  ariaLabel="three-dots-loading"
+               />
+            </>
          }
       </section>
    )

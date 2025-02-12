@@ -15,7 +15,7 @@ export default function Host() {
                   <NavLink
                      className={({isActive}) => `host__link ${isActive ? "active" : ""}`}
                      end
-                     to="" // IT'S INDEX
+                     to="." // IT'S INDEX
                   >
                      Dashboard
                   </NavLink>

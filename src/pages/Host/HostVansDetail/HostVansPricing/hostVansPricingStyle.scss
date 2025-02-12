@@ -1,0 +1,13 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.detail-paragraph {
+   font-weight: 500;
+   font-size: px-to-rem(24);
+
+   &>span {
+      color: #4D4D4D;
+      font-size: px-to-rem(16);
+   }
+}

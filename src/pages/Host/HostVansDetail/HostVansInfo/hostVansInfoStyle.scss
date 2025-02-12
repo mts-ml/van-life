@@ -1,0 +1,22 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.host-info__obj {
+   display: flex;
+   gap: px-to-rem(5);
+   margin-block-end: px-to-rem(15);
+   line-height: px-to-rem(21.46);
+}
+
+.host-info__key {
+   font-size: px-to-rem(14.35);
+   font-weight: 700;
+}
+
+.host-info__key {
+   &>span {
+      text-transform: capitalize;
+      font-weight: 500;
+   }
+}

@@ -1,0 +1,9 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.host-photos__img {
+   width: 100%;
+   max-width: px-to-rem(500);
+   cursor: pointer;
+}

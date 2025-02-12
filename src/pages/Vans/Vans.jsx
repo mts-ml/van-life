@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
 
 import './vansStyle.scss';
@@ -9,13 +9,17 @@ import './vansStyle.scss';
 export default function Vans() {
    const [vans, setVans] = useState([])
 
+   const [searchParams, setSearchParams] = useSearchParams();
+
+   const typeFilter = searchParams.get('type');
+
    useEffect(() => {
       async function fetchData() {
          const response = await fetch("/api/vans");
          const data = await response.json();
-         setVans(data.vans)
+         setVans(data.vans);
       }
-      fetchData()
+      fetchData();
    }, []);
 
    const vanType = (type) => {
@@ -27,6 +31,18 @@ export default function Vans() {
       })
    }
 
+   const vanLink = (type) => clsx({
+      "vans__type-link": true,
+      "simple": type === "simple",
+      "luxury": type === "luxury",
+      "rugged": type === "rugged"
+   })
+
+   const displayedVans = typeFilter ? vans.filter(van => (
+      van.type === typeFilter))
+      :
+      vans;
+
 
    return (
       vans.length > 0 ?
@@ -35,24 +51,25 @@ export default function Vans() {
 
             <div className="vans__filter">
                <ul className="vans__list">
-                  <li className='vans__li'>
-                     <a href="#" target="_self" rel="noopener noreferrer">Simple</a>
-                  </li>
-
-                  <li className='vans__li'>
-                     <a href="#" target="_self" rel="noopener noreferrer">Luxury</a>
-                  </li>
-
-                  <li className='vans__li'>
-                     <a href="#" target="_self" rel="noopener noreferrer">Rugged</a>
-                  </li>
+                  {/* Renders 3 Links, adds custom className to each one depending on type and applies captilize */}
+                  {["simple", "luxury", "rugged"].map(type => (
+                     <li key={type} className='vans__li'>
+                        <Link className={vanLink(type)} to={`?type=${type}`}>
+                           {type.charAt(0).toUpperCase() + type.slice(1)}
+                        </Link>
+                     </li>
+                  ))}
                </ul>
 
-               <span className="vans__clear">Clear filters</span>
+               <button
+                  className="vans__clear"
+                  onClick={() => setSearchParams({})}
+               >Clear filters
+               </button>
             </div>
 
             <div className="vans__wrapper">
-               {vans.map(van => (
+               {displayedVans.map(van => (
                   <div className="vans__van" key={van.id}>
                      <Link
                         to={`/vans/${van.id}`}
@@ -75,7 +92,7 @@ export default function Vans() {
                   </div>
                ))}
             </div>
-         </section>
+         </section >
          :
          <div>
             <span id='loading'>Loading...</span>

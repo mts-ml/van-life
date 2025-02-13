@@ -55,7 +55,7 @@ export default function HostVansDetail() {
                <ul className="host-detail__list">
                   <li className="host-detail__li">
                      <NavLink
-                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
+                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "host-detail-active" : ''}`}
                         to="." // IT'S INDEX
                         end
                      >
@@ -64,7 +64,7 @@ export default function HostVansDetail() {
 
                   <li className="host-detail__li">
                      <NavLink
-                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
+                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "host-detail-active" : ''}`}
                         to={`pricing`}
                      >
                         Pricing</NavLink>
@@ -72,7 +72,7 @@ export default function HostVansDetail() {
 
                   <li className="host-detail__li">
                      <NavLink
-                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "active" : ''}`}
+                        className={({ isActive }) => `host-detail__ul-link ${isActive ? "host-detail-active" : ''}`}
                         to={`photos`}
                      >
                         Photos</NavLink>

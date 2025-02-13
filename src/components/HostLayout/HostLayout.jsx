@@ -13,7 +13,7 @@ export default function Host() {
             <ul className="host__list">
                <li className="host__li">
                   <NavLink
-                     className={({isActive}) => `host__link ${isActive ? "active" : ""}`}
+                     className={({isActive}) => `host__link ${isActive ? "host-active" : ""}`}
                      end
                      to="." // IT'S INDEX
                   >
@@ -34,7 +34,6 @@ export default function Host() {
                   <NavLink
                      className="host__link"
                      to="vans"
-                     end={false}
                      aria-current={location.pathname === "/host/vans" ? "page" : undefined}>Vans
                   </NavLink>
                </li>

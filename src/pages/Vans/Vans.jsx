@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Link, NavLink, useSearchParams, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
-import { Link, useSearchParams } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
 
 import './vansStyle.scss';
@@ -12,6 +12,9 @@ export default function Vans() {
    const [searchParams, setSearchParams] = useSearchParams();
 
    const typeFilter = searchParams.get('type');
+
+   const pageLocation = useLocation();
+   console.log(pageLocation)
 
    useEffect(() => {
       async function fetchData() {
@@ -31,13 +34,6 @@ export default function Vans() {
       })
    }
 
-   const vanLink = (type) => clsx({
-      "vans__type-link": true,
-      "simple": type === "simple",
-      "luxury": type === "luxury",
-      "rugged": type === "rugged"
-   })
-
    const displayedVans = typeFilter ? vans.filter(van => (
       van.type === typeFilter))
       :
@@ -49,30 +45,35 @@ export default function Vans() {
          <section className="vans">
             <h2 className="vans__title">Explore our van options</h2>
 
-            <div className="vans__filter">
+            <nav className="vans__filter">
                <ul className="vans__list">
                   {/* Renders 3 Links, adds custom className to each one depending on type and applies captilize */}
                   {["simple", "luxury", "rugged"].map(type => (
                      <li key={type} className='vans__li'>
-                        <Link className={vanLink(type)} to={`?type=${type}`}>
+                        <NavLink
+                           className={() => clsx(`vans__type-link-${type}`,
+                              
+                              typeFilter === type && `active-vans-link-${type}`)}
+                           to={`?type=${type}`}
+                        >
                            {type.charAt(0).toUpperCase() + type.slice(1)}
-                        </Link>
+                        </NavLink>
                      </li>
                   ))}
                </ul>
 
-               <button
-                  className="vans__clear"
+               <button className={`vans__clear ${typeFilter ? "vans__btn-visible" : ""}`}
                   onClick={() => setSearchParams({})}
-               >Clear filters
-               </button>
-            </div>
+               >
+                  Clear filters</button>
+            </nav>
 
             <div className="vans__wrapper">
                {displayedVans.map(van => (
                   <div className="vans__van" key={van.id}>
                      <Link
-                        to={`/vans/${van.id}`}
+                        to={van.id}
+                        state={{searchUrl: searchParams.toString()}}
                         className="vans__link"
                         aria-label={`View details for the van ${van.name}, priced at ${van.price} per day.`}
                      >

@@ -38,12 +38,67 @@
    font-weight: 500;
 }
 
-.vans__type-link {
+.vans__type-link-simple {
    position: relative;
    text-decoration: none;
    border-radius: px-to-rem(5);
-   color: #FFEAD0;
+   color: #4D4D4D;
    padding: px-to-rem(6);
+   background-color: #FFEAD0;
+   transition: background-color .5s ease-in-out;
+
+   &:hover {
+      color: #FFEAD0;
+      background-color: #E17654;
+      transition: background-color .5s ease-in-out;
+   }
+}
+
+.vans__type-link-rugged {
+   position: relative;
+   text-decoration: none;
+   border-radius: px-to-rem(5);
+   color: #4D4D4D;
+   padding: px-to-rem(6);
+   background-color: #FFEAD0;   
+   transition: background-color .5s ease-in-out;
+
+   &:hover {
+      background-color: #115E59;
+      color: #FFEAD0;      
+      transition: background-color .5s ease-in-out;
+   }
+}
+
+.vans__type-link-luxury {
+   position: relative;
+   text-decoration: none;
+   border-radius: px-to-rem(5);
+   color: #4D4D4D;
+   padding: px-to-rem(6);
+   background-color: #FFEAD0;
+   transition: background-color .5s ease-in-out;
+
+   &:hover {
+      background-color: #161616;
+      color: #FFEAD0;
+      transition: background-color .5s ease-in-out;
+   }
+}
+
+.active-vans-link-simple {
+   background-color: #E17654;
+   color: #FFEAD0;
+}
+
+.active-vans-link-rugged {
+   background-color: #115E59;
+   color: #FFEAD0;
+}
+
+.active-vans-link-luxury {
+   background-color: #161616;
+   color: #FFEAD0;
 }
 
 // MEDIA QUERIE
@@ -82,7 +137,10 @@
    cursor: pointer;
    border: none;
    background-color: #FFF7ED;
+   pointer-events: none;
    margin-block-start: px-to-rem(40);
+   opacity: 0;
+   transition: opacity .4s ease-in-out;
 }
 
 @media (min-width: px-to-rem(390)) {
@@ -96,16 +154,14 @@
    }
 
    .vans__clear {
-      font-size: px-to-rem(16);
-      font-weight: 500;
-      color: #4D4D4D;
-      text-decoration: underline;
-      text-decoration-color: #4D4D4D;
-      cursor: pointer;
-      border: none;
-      background-color: #FFF7ED;
       margin-block-start: 0;
    }
+}
+
+.vans__btn-visible {
+   opacity: 1;
+   pointer-events: auto;
+   transition: opacity .4s ease-in-out;
 }
 
 .vans__info {

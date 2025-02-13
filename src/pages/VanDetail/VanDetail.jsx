@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import arrow from '../../assets/images/arrow.png';
 import clsx from 'clsx';
 import { ThreeDots } from 'react-loader-spinner';
@@ -13,6 +12,9 @@ export default function VanDetail() {
 
    const params = useParams();
 
+   const pageLocation = useLocation();
+   console.log(pageLocation);
+
    useEffect(() => {
       async function fetchData() {
          const response = await fetch(`/api/vans/${params.id}`);
@@ -24,16 +26,20 @@ export default function VanDetail() {
 
    const vanType = clsx({
       van__type: true,
-      simple: van.type === "simple",
-      rugged: van.type === "rugged",
-      luxury: van.type === "luxury"
+      "vanDetail-simple": van.type === "simple",
+      "vanDetail-rugged": van.type === "rugged",
+      "vanDetail-luxury": van.type === "luxury"
    })
 
    return (
       Object.keys(van).length > 0 ?
 
          <section className="van">
-            <Link to="/vans" className="van__link">
+            <Link
+               className="van__link"
+               to={`..?${pageLocation.state.searchUrl}`}
+               relative="path"
+            >
                <img src={arrow} alt="Picture of a left arrow" />
                <span className="van__span">Back to all vans</span>
             </Link>

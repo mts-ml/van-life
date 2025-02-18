@@ -1,0 +1,29 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.error {
+   position: relative;
+   padding-inline: px-to-rem(26);
+   margin-inline: auto;
+   max-width: px-to-rem(1400);
+}
+
+.error__title {
+   font-size: px-to-rem(32);
+   font-weight: 700;
+   margin-block: px-to-rem(215) px-to-rem(30);
+}
+
+.error__btn {
+   display: grid;
+   place-items: center;
+   border-radius: px-to-rem(5);
+   background-color: #161616;
+   color: #fff;
+   width: 100%;
+   height: px-to-rem(55);
+   font-size: px-to-rem(18);
+   font-weight: 700;
+   text-decoration: none;
+}

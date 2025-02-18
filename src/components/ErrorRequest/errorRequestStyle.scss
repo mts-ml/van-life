@@ -1,0 +1,24 @@
+@function px-to-rem($px-value) {
+   @return $px-value / 16 * 1rem
+}
+
+.error-request {
+   padding-inline: px-to-rem(26);
+   margin: px-to-rem(50) auto;
+   max-width: px-to-rem(1400);
+
+   span {
+      font-weight: 700;
+   }
+}
+
+.error-request__title {
+   font-size: px-to-rem(32);
+   font-weight: 400;
+   margin-block-end: px-to-rem(10);
+}
+
+.error-request__description {
+   font-size: px-to-rem(25);
+   margin-block-end: px-to-rem(10);
+}

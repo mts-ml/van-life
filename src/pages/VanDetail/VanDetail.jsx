@@ -15,6 +15,10 @@ export default function VanDetail() {
    const pageLocation = useLocation();
    console.log(pageLocation);
 
+   const vanFilterState = pageLocation.state?.searchUrl;
+
+   const vanFilterType = pageLocation.state?.type || "all";
+
    useEffect(() => {
       async function fetchData() {
          const response = await fetch(`/api/vans/${params.id}`);
@@ -37,11 +41,11 @@ export default function VanDetail() {
          <section className="van">
             <Link
                className="van__link"
-               to={`..?${pageLocation.state.searchUrl}`}
+               to={`..?${vanFilterState}`}
                relative="path"
             >
                <img src={arrow} alt="Picture of a left arrow" />
-               <span className="van__span">Back to all vans</span>
+               <span className="van__span">Back to {vanFilterType} vans</span>
             </Link>
 
             <img className='van__img' src={van.imageUrl} alt={van.description} />

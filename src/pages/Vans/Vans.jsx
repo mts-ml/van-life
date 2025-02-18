@@ -1,29 +1,28 @@
-import { useEffect, useState } from 'react';
-import { Link, NavLink, useSearchParams, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, NavLink, useSearchParams, useLocation, useLoaderData } from 'react-router-dom';
 import clsx from 'clsx';
 import { ThreeDots } from 'react-loader-spinner';
+import { getVans } from '../../api';
 
 import './vansStyle.scss';
 
+export function loader() {
+   return getVans();
+}
+
 
 export default function Vans() {
-   const [vans, setVans] = useState([])
+   const vans = useLoaderData();
+   console.log(vans)
+
+   const [error, setError] = useState(null);
 
    const [searchParams, setSearchParams] = useSearchParams();
 
    const typeFilter = searchParams.get('type');
 
    const pageLocation = useLocation();
-   console.log(pageLocation)
-
-   useEffect(() => {
-      async function fetchData() {
-         const response = await fetch("/api/vans");
-         const data = await response.json();
-         setVans(data.vans);
-      }
-      fetchData();
-   }, []);
+   console.log(pageLocation);
 
    const vanType = (type) => {
       return clsx({
@@ -39,6 +38,9 @@ export default function Vans() {
       :
       vans;
 
+   if (error) {
+      return <h1 className='error__msg' aria-live='assertive'>There was an error: {error.message}</h1>
+   }
 
    return (
       vans.length > 0 ?
@@ -52,7 +54,6 @@ export default function Vans() {
                      <li key={type} className='vans__li'>
                         <NavLink
                            className={() => clsx(`vans__type-link-${type}`,
-                              
                               typeFilter === type && `active-vans-link-${type}`)}
                            to={`?type=${type}`}
                         >
@@ -73,7 +74,10 @@ export default function Vans() {
                   <div className="vans__van" key={van.id}>
                      <Link
                         to={van.id}
-                        state={{searchUrl: searchParams.toString()}}
+                        state={{
+                           searchUrl: searchParams.toString(),
+                           type: typeFilter
+                        }}
                         className="vans__link"
                         aria-label={`View details for the van ${van.name}, priced at ${van.price} per day.`}
                      >
@@ -95,7 +99,7 @@ export default function Vans() {
             </div>
          </section >
          :
-         <div>
+         <div aria-live='polite'>
             <span id='loading'>Loading...</span>
             <ThreeDots
                visible={true}

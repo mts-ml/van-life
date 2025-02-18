@@ -1,0 +1,76 @@
+@function px-to-rem($value) {
+   @return $value / 16 * 1rem
+}
+
+.income {
+   padding-inline: px-to-rem(26);
+   margin: px-to-rem(57) auto px-to-rem(43);
+   max-width: px-to-rem(1400);
+}
+
+.income__title {
+   font-size: px-to-rem(36);
+   font-weight: 700;
+   margin-block-end: px-to-rem(43)
+}
+
+.income__time {
+   font-size: px-to-rem(16);
+   font-weight: 500;
+   color: #4D4D4D;
+
+   span {
+      text-decoration: underline;
+   }
+}
+
+.income__money {
+   font-size: px-to-rem(48);
+   font-weight: 800;
+   margin-block: px-to-rem(31) px-to-rem(57);
+}
+
+.income__img {
+   width: 100%;
+   margin-inline: auto;
+   max-width: px-to-rem(550);
+   margin-block-end: px-to-rem(62.5);
+}
+
+.income__transactions-div {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-block-end: px-to-rem(31);
+}
+
+.income__transactions {
+   font-size: clamp(1rem, 0.818rem + 0.909vw, 1.5rem);
+   font-weight: 700;
+}
+
+.income__period {
+   padding: px-to-rem(35) px-to-rem(29);
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-block-end: px-to-rem(31);
+   border-radius: px-to-rem(6);
+}
+
+.income__period:last-child {
+   margin-block-end: px-to-rem(62);
+}
+
+.income__period-money {
+   font-size: clamp(1.563rem, 1.313rem + 1.25vw, 2.25rem);
+   font-weight: 600;
+}
+
+.income__period-time {
+   font-size: px-to-rem(20);
+   font-weight: 500;
+   color: #4D4D4D;
+}
+
